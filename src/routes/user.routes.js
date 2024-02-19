@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { signup } from "../controllers/signup.controllers.js";
+import { postSignin, postSignup } from "../controllers/signup.controllers.js";
 
 
 const signRouter = Router()
 
-signRouter.post("/signup", signup)
-
+signRouter.post("/signup", postSignup)
+signRouter.post("/signin", postSignin)
 export default signRouter
